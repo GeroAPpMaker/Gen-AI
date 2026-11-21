@@ -1,0 +1,10 @@
+# Environment variables — keep API keys out of git
+.env
+
+# Node dependencies
+server/node_modules/
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db

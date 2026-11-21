@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Chat for Educators — Gemini Guide</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/modules.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="gemini-icon">
+                <span class="g-dot g1"></span>
+                <span class="g-dot g2"></span>
+                <span class="g-dot g3"></span>
+                <span class="g-dot g4"></span>
+            </div>
+            <span>Gemini for Educators</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="prompt-engineering.html">Prompts</a></li>
+            <li><a href="gemini-chat.html" class="active">Chat</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="gems.html">Gems</a></li>
+            <li><a href="notebook-lm.html">NotebookLM</a></li>
+            <li><a href="nano.html">Nano</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- MODULE HERO -->
+    <header class="module-hero" style="background: linear-gradient(135deg, #EA4335 0%, #C5221F 100%);">
+        <div class="module-hero-content">
+            <div class="module-badge-icon">
+                <i class="fas fa-comments"></i>
+            </div>
+            <h1>Gemini Chat for Educators</h1>
+            <p>Master Gemini's conversational AI for planning, creating, and analyzing</p>
+            <div class="module-info-bar">
+                <span><i class="fas fa-clock"></i> 20 min</span>
+                <span><i class="fas fa-signal"></i> Core</span>
+                <span><i class="fas fa-list-ol"></i> 5 Steps</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="step-content-area container">
+
+        <!-- STUB NOTICE -->
+        <div class="content-card" style="border-left: 4px solid #FBBC04; background: #FFFDE7; margin-bottom: 30px;">
+            <h3><i class="fas fa-hard-hat" style="color:#FBBC04;"></i> Lesson Content Coming Soon</h3>
+            <p>This module stub is fully functional for quiz and Study Buddy testing.
+               Full lesson content covering multimodal input, image analysis, Extensions, and
+               Workspace integration still needs to be written here.</p>
+            <p><strong>Topics to cover:</strong> Multimodal Input &bull; Image Analysis &bull; Extensions &bull; Workspace Integration</p>
+        </div>
+
+        <!-- QUIZ -->
+        <div class="step-header">
+            <span class="step-label">Knowledge Check</span>
+            <h2>💬 Gemini Chat Knowledge Check</h2>
+            <p>Test your understanding of Gemini Chat!</p>
+        </div>
+
+        <!-- Quiz rendered by js/quiz.js -->
+        <div id="quiz-mount"></div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>🎓 Gemini AI for Educators | Made with ❤️ for Teachers</p>
+                <p class="footer-note">Educational resource. Not affiliated with Google.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script src="../data/quiz-data.js"></script>
+    <script src="../js/quiz.js"></script>
+    <script>
+        window.CHAT_MODULE_ID = 'gemini-chat';
+        document.addEventListener('DOMContentLoaded', function () {
+            enforceModuleLock();
+            Quiz.init('gemini-chat');
+        });
+    </script>
+    <script src="../js/chat.js"></script>
+</body>
+</html>

@@ -198,7 +198,7 @@
 
             <div class="module-grid">
                 <!-- Module 1: Prompt Engineering -->
-                <div class="module-card" onclick="location.href='pages/prompt-engineering.html'">
+                <div class="module-card" data-module="prompt" onclick="location.href='pages/prompt-engineering.html'">
                     <div class="module-ribbon">Start Here</div>
                     <div class="module-icon" style="background: linear-gradient(135deg, #4285F4, #669DF6);">
                         <i class="fas fa-pen-nib"></i>
@@ -222,7 +222,7 @@
                 </div>
 
                 <!-- Module 2: Gemini Chat -->
-                <div class="module-card" onclick="location.href='pages/gemini-chat.html'">
+                <div class="module-card" data-module="gemini-chat" onclick="location.href='pages/gemini-chat.html'">
                     <div class="module-icon" style="background: linear-gradient(135deg, #EA4335, #FF6D5A);">
                         <i class="fas fa-comments"></i>
                     </div>
@@ -245,7 +245,7 @@
                 </div>
 
                 <!-- Module 3: Canvas -->
-                <div class="module-card" onclick="location.href='pages/canvas.html'">
+                <div class="module-card" data-module="canvas" onclick="location.href='pages/canvas.html'">
                     <div class="module-icon" style="background: linear-gradient(135deg, #FBBC04, #FDD663);">
                         <i class="fas fa-palette"></i>
                     </div>
@@ -268,7 +268,7 @@
                 </div>
 
                 <!-- Module 4: Gems -->
-                <div class="module-card" onclick="location.href='pages/gems.html'">
+                <div class="module-card" data-module="gems" onclick="location.href='pages/gems.html'">
                     <div class="module-icon" style="background: linear-gradient(135deg, #34A853, #5BB974);">
                         <i class="fas fa-gem"></i>
                     </div>
@@ -291,7 +291,7 @@
                 </div>
 
                 <!-- Module 5: NotebookLM -->
-                <div class="module-card" onclick="location.href='pages/notebook-lm.html'">
+                <div class="module-card" data-module="notebooklm" onclick="location.href='pages/notebook-lm.html'">
                     <div class="module-icon" style="background: linear-gradient(135deg, #9334E6, #B55BFC);">
                         <i class="fas fa-book-open"></i>
                     </div>
@@ -314,7 +314,7 @@
                 </div>
 
                 <!-- Module 6: Nano -->
-                <div class="module-card" onclick="location.href='pages/nano.html'">
+                <div class="module-card" data-module="nano" onclick="location.href='pages/nano.html'">
                     <div class="module-icon" style="background: linear-gradient(135deg, #E8710A, #F29900);">
                         <i class="fas fa-bolt"></i>
                     </div>
@@ -352,26 +352,32 @@
                 <div class="progress-module" data-module="prompt">
                     <i class="far fa-circle"></i>
                     <span>Prompts</span>
+                    <span class="module-best-score"></span>
                 </div>
                 <div class="progress-module" data-module="gemini-chat">
                     <i class="far fa-circle"></i>
                     <span>Chat</span>
+                    <span class="module-best-score"></span>
                 </div>
                 <div class="progress-module" data-module="canvas">
                     <i class="far fa-circle"></i>
                     <span>Canvas</span>
+                    <span class="module-best-score"></span>
                 </div>
                 <div class="progress-module" data-module="gems">
                     <i class="far fa-circle"></i>
                     <span>Gems</span>
+                    <span class="module-best-score"></span>
                 </div>
                 <div class="progress-module" data-module="notebooklm">
                     <i class="far fa-circle"></i>
                     <span>NotebookLM</span>
+                    <span class="module-best-score"></span>
                 </div>
                 <div class="progress-module" data-module="nano">
                     <i class="far fa-circle"></i>
                     <span>Nano</span>
+                    <span class="module-best-score"></span>
                 </div>
             </div>
         </div>
@@ -475,7 +481,7 @@
             </div>
             <div class="footer-bottom">
                 <p>🎓 Gemini AI for Educators | Made with ❤️ for Teachers</p>
-                <p class="footer-note">Educational resource. Not affiliated with Google.</p>
+                <p class="footer-note">Created by APPGERO Not affiliated with Google.</p>
             </div>
         </div>
     </footer>

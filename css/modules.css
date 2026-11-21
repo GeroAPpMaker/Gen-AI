@@ -1,4 +1,21 @@
 /* ============================= */
+/*   BEST SCORE BADGE            */
+/* ============================= */
+.module-best-score {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #34A853;
+    background: #E6F4EA;
+    padding: 1px 6px;
+    border-radius: 50px;
+    margin-left: 4px;
+    min-width: 1px;
+}
+
+.module-best-score:empty { display: none; }
+
+/* ============================= */
 /*      MODULE HERO              */
 /* ============================= */
 .module-hero {
@@ -1445,3 +1462,100 @@
         justify-content: center;
     }
 }
+
+/* ============================= */
+/*   QUIZ COMPONENT (quiz.js)    */
+/* ============================= */
+
+/* fieldset/legend reset for accessible quiz questions */
+.quiz-question fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.quiz-question legend {
+    display: block;
+    padding: 0;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.question-text {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--text-dark);
+    margin-top: 4px;
+}
+
+/* review items for the new component */
+.review-correct i { color: #22C55E; }
+.review-incorrect i { color: #EF4444; }
+
+/* quiz-mount wrapper spacing */
+#quiz-mount { margin-top: 10px; }
+
+/* ============================= */
+/*   LOCKED MODULE CARDS         */
+/* ============================= */
+.module-card.locked {
+    opacity: 0.6;
+    cursor: not-allowed;
+    position: relative;
+}
+
+.module-card.locked::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: rgba(255,255,255,0.3);
+    pointer-events: none;
+}
+
+.module-lock-overlay {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #64748B;
+    color: white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    z-index: 2;
+}
+
+/* ============================= */
+/*   LOCKED PAGE MESSAGE         */
+/* ============================= */
+.locked-page-message {
+    max-width: 480px;
+    margin: 80px auto;
+    text-align: center;
+    padding: 40px 30px;
+    background: var(--bg-white);
+    border: 2px solid #E2E8F0;
+    border-radius: var(--radius);
+}
+
+.locked-page-message .lock-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #64748B;
+}
+
+.locked-page-message h2 {
+    margin-bottom: 12px;
+}
+
+.locked-page-message p {
+    color: var(--text-gray);
+    margin-bottom: 24px;
+}
+
