@@ -282,12 +282,16 @@
     })
       .then(res => {
         if (res.status === 429) throw new Error('rate_limit');
-        if (!res.ok) throw new Error('server_error');
-        return res.json();
+        // Read body regardless of status so we can surface the error message
+        return res.json().then(data => ({ ok: res.ok, data }));
       })
-      .then(data => {
+      .then(({ ok, data }) => {
         _setLoading(false);
-        if (data.error) throw new Error(data.error);
+        if (!ok || data.error) {
+          const msg = data.error || 'Server error. Please try again.';
+          _appendMessage('model', _esc(msg), false, true);
+          return;
+        }
         const reply = data.reply || 'Sorry, I didn\'t get a response. Please try again.';
         _appendMessage('model', _safeMd(reply));
         _messages.push({ role: 'model', text: reply });
@@ -300,6 +304,7 @@
         let msg = 'Something went wrong. Please try again.';
         if (err.message === 'rate_limit') msg = 'You\'re sending messages too fast. Please wait a moment.';
         else if (err.message === 'Failed to fetch') msg = 'Network error — check your connection and that the server is running.';
+        else msg = _esc(err.message) || msg;
         _appendMessage('model', msg, false, true);
       });
   }
