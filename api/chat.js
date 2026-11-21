@@ -217,7 +217,9 @@ module.exports = async function handler(req, res) {
       return res.status(429).json({ error: 'Rate limit reached. Please wait a moment and try again.' });
     }
     if (status !== 200) {
-      return res.status(502).json({ error: 'Upstream AI service error. Please try again.' });
+      let detail = '';
+      try { detail = JSON.parse(body)?.error?.message || ''; } catch (_) { detail = ''; }
+      return res.status(502).json({ error: `Gemini API error (HTTP ${status})${detail ? ': ' + detail : ''}` });
     }
 
     const parsed = JSON.parse(body);
